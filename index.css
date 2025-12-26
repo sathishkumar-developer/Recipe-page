@@ -1,0 +1,152 @@
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+* {
+    font-family: Young Serif, Outfit;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--stone-100);
+    width: 100%;
+}
+
+.receipe-container, .mobile-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.receipe-container {
+    width: 100%;
+    max-width: 720px;
+    min-width: 320px;
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 20px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+p, li, span {
+    font-size: 16px;
+    color: var(--stone-600);
+    /* font-weight: var(--font-weight-bold); */
+    font-family: outfit;
+}
+
+p {
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h3, ul li::marker, ol li::marker {
+    color: var(--brown-800);
+}
+
+.nutrition-value {
+    color: var(--brown-800);
+    font-weight: var(--font-weight-semibold);
+}
+
+.preparation {
+    background-color: var(--rose-50);
+    padding: 24px;
+    border-radius: 20px;
+}
+
+h5 {
+    padding: 16px;
+    font-size: 24px;
+    font-family: outfit;
+    color: var(--rose-800);
+}
+
+.preparation-list, .instruction-list, .ingredient-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.nutrition-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32%;
+    text-align: center;
+    width: 100%;
+    max-width: 50%;
+
+}
+
+.nutrition-table {
+    display: flex;
+    padding-left: 40px;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.nutrition-name {
+    color: var(--stone-600);
+}
+
+@media (max-width : 375px) {
+    body {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .receipe-container {
+        padding: 0;
+    }
+
+    .mobile-container {
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    img {
+        border-radius: 0;
+    }
+}
+
+.hightlight-bold {
+    color: var(--stone-600);
+    font-weight: var(--font-weight-bold);
+    font-family: outfit;
+}
